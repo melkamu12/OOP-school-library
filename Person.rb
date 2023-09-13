@@ -2,11 +2,11 @@ class person
     att_accessor :name, :age
     att_reader :id
 
-    def initialize(id, age, name='unknown', parent_permission:true)
-        @id = id
-        @name = name
-        @age = age
-        @parent_permission = parent_permission
+    def initialize(id, age, name = 'unknown', parent_permission:true)
+      @id = id
+      @name = name
+      @age = age
+      @parent_permission = parent_permission
     end
     private 
     
