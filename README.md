@@ -29,7 +29,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 School Library <a name="about-project"></a>
-    - The School Library Management is designed to streamline the process of managing books and borrowers. This project is designed with Ruby that allows librarians to efficiently add new students and teachers, add books to the library's collection, and maintain accurate records of book borrowing activities
+- The School Library Management is designed to streamline the process of managing books and borrowers. This project is designed with Ruby that allows librarians to efficiently add new students and teachers, add books to the library's collection, and maintain accurate records of book borrowing activities
 
 
 ## 🛠 Built With <a name="built-with"></a>
