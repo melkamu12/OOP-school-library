@@ -10,8 +10,8 @@ class Student < Person
     '¯\\(ツ)/¯'
   end
 
-  def assign_classroom(classroom)
-    self.classroom = classroom
+  def assign_classroom=(classroom)
+    @classroom = classroom
     classroom.students.push(self) unless classroom.students.iclude?(self)
   end
 end
