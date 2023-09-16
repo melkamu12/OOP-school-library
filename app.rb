@@ -143,7 +143,7 @@ class App
     if MENU_OPTIONS.include?(option)
       send(MENU_OPTIONS[option])
     else
-      puts 'Invalid input. Try again.'
+      puts 'Invalid input . Try again.'
     end
   end
 
