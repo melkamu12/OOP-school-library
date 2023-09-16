@@ -99,10 +99,10 @@ class App
     if @books.empty? || @people.empty?
       puts 'Nothing to see here.'
     else
-      puts 'Enter the number of the book you want: '
+      puts 'Select a book from the following list by number: '
       list_books
       book_number = gets.chomp.to_i
-      puts 'Enter your ID: '
+      puts 'Select a person from the following list by nuber(not Id) '
       list_people
       person_id = gets.chomp.to_i
       print 'Enter the date [yyyy-mm-dd]: '
