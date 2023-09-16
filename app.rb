@@ -31,7 +31,7 @@ class App
     else
       puts "There are #{@books.count} book(s) available."
       @books.each_with_index do |book, index|
-        puts "#{index + 1}) Title: \"#{book.title}\" | Author: #{book.author}"
+        puts "#{index}) Title: \"#{book.title}\" | Author: #{book.author}"
       end
     end
   end
@@ -41,7 +41,7 @@ class App
       puts 'No people added yet. Please add a person and try again.'
     else
       @people.each_with_index do |person, index|
-        puts "#{index + 1}) [#{person.class}] Name: #{person.name} | Age: #{person.age} | ID: #{person.id}"
+        puts "#{index}) [#{person.class}] Name: #{person.name} | Age: #{person.age} | ID: #{person.id}"
       end
     end
   end
@@ -101,15 +101,13 @@ class App
     else
       puts 'Enter the number of the book you want: '
       list_books
-      book_number = gets.chomp.to_i - 1
+      book_number = gets.chomp.to_i
       puts 'Enter your ID: '
       list_people
       person_id = gets.chomp.to_i
-      individual = @people.find { |person| person.id == person_id }
-
       print 'Enter the date [yyyy-mm-dd]: '
       date = gets.chomp.to_s
-      rental = Rental.new(date, @books[book_number], individual)
+      rental = Rental.new(date, @books[book_number], @people[person_id])
       @rentals << rental
       puts 'Book rented successfully.'
     end
@@ -121,7 +119,7 @@ class App
     else
       print 'To view your rentals, enter your ID: '
       id = gets.chomp.to_i
-      rental = @rentals.select { |rent| rent.person.id == id }
+      rental = @rentals.select { |rend| rend.person.id == id }
 
       if rental.empty?
         puts 'No records for that ID.'
