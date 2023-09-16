@@ -67,7 +67,7 @@ class App
   def create_student(age, name)
     print 'Parent permission? [Y/N]: '
     permission_option = gets.chomp.downcase
-    student = Student.new(age, name, parent_permission: permission_option == 'y')
+    student = Student.new(specialization, age, name, parent_permission: permission_option == 'y')
     @people << student
     puts "Student created successfully. ID is #{student.id}"
   end
